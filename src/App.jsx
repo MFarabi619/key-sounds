@@ -7,15 +7,15 @@ function App() {
     <div className="App">
       <container id="drum-machine">
         <container id="display">
-          <div className="drum-pad" id="Heater 1">W</div>
-          <div className="drum-pad" id="Heater 2">Q</div>
-          <div className="drum-pad" id="Heater 3">E</div>
-          <div className="drum-pad" id="Heater 4">A</div>
-          <div className="drum-pad" id="Clap">S</div>
-          <div className="drum-pad" id="Open-HH">D</div>
-          <div className="drum-pad" id="Kick-n'-Hat">Z</div>
-          <div className="drum-pad" id="Kick">X</div>
-          <div className="drum-pad" id="Closed-HH">C</div>
+          <div className="drum-pad" id="Heater 1"><audio className="clip" id="W" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio> W</div>
+          <div className="drum-pad" id="Heater 2"><audio className="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio> Q</div>
+          <div className="drum-pad" id="Heater 3"><audio className="clip" id="E" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio> E</div>
+          <div className="drum-pad" id="Heater 4"><audio className="clip" id="A" src=""></audio> A</div>
+          <div className="drum-pad" id="Clap"><audio className="clip" id="S" src=""></audio> S</div>
+          <div className="drum-pad" id="Open-HH"><audio className="clip" id="D" src=""></audio> D</div>
+          <div className="drum-pad" id="Kick-n'-Hat"><audio className="clip" id="Z" src=""></audio> Z</div>
+          <div className="drum-pad" id="Kick"><audio className="clip" id="X" src=""></audio> X</div>
+          <div className="drum-pad" id="Closed-HH"><audio className="clip" id="C" src=""></audio> C</div>
         </container></container>    
     </div>
   )
