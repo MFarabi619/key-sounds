@@ -68,8 +68,8 @@ function App() {
         </container>
 
         {soundArray.map(sound => {
-          return <button>
-            <audio src={sound.url} />
+          return <button className='drum-pad' id={sound.id}>
+            <audio className='clip' id={sound.key} src={sound.url} />
             {sound.key}
           </button>
         })}
