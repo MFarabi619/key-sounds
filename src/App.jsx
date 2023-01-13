@@ -63,6 +63,7 @@ const soundArray =[
 function App() {
   const [currentKey, setCurrentKey] = useState(
     ''
+
     );
     const playSound = selector => {
       const audio = document.getElementById(selector);
