@@ -62,19 +62,22 @@ function App() {
 
   return (
     <div className="App">
-      <container id="drum-machine">
-        <container id="display">
+      <div id="drum-machine">
+        <div id="display">
           Some text to be displayed here
-        </container>
+        </div>
 
+        <div className="keyPad">
+          
         {soundArray.map(sound => {
           return <button className='drum-pad' id={sound.id}>
             <audio className='clip' id={sound.key} src={sound.url} />
             {sound.key}
           </button>
         })}
+        </div>
           
-      </container>    
+      </div>    
     </div>
   )
 }
