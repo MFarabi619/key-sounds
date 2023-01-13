@@ -98,8 +98,10 @@ function App() {
           </button>
         })}
         </div>
-          
-      </div>    
+        </div>
+      <div className='credits'>
+          Created with 💖 in Vite + React by Mumtahin Farabi :)
+        </div>
     </div>
   )
 }
