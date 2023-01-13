@@ -1,4 +1,4 @@
-import {useEffect } from 'react'
+import {useState, useEffect} from 'react'
 import './App.scss'
 
 const soundArray =[
@@ -58,17 +58,24 @@ const soundArray =[
   }
 ]; 
 
-const playSound = selector => {
-  const audio = document.getElementById(selector)
-  audio.play()
-}
+
 
 function App() {
-
+  const [currentKey, setCurrentKey] = useState(
+    ''
+    );
+    const playSound = selector => {
+      const audio = document.getElementById(selector);
+      audio.play();
+      let soundId = soundArray.filter(obj => {
+        return obj.key === selector;
+      })
+      setCurrentKey(soundId[0].id);
+    }
+  
   useEffect(() => {
     document.addEventListener('keydown', (event) => {
-      console.log(event.key)
-      playSound(event.key.toUpperCase())
+      playSound(event.key.toUpperCase());
     })
 
   }, [])
@@ -77,7 +84,7 @@ function App() {
     <div className="App">
       <div id="drum-machine">
         <div id="display">
-          Some text to be displayed here
+          {currentKey}
         </div>
 
         <div className="keyPad">
