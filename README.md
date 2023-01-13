@@ -1,7 +1,7 @@
 # key-sounds
 A simple web app that generates audio corresponding to keystroke
 
-[Live Demo]()
+[Live Demo](https://key-sounds.vercel.app/)
 
-![Image]()
+![Image](https://ibb.co/XYQ4k5L)
 
