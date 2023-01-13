@@ -1,7 +1,62 @@
 import { useState } from 'react'
 import './App.scss'
 
-const soundArray = 
+const soundArray =[
+  {
+    keyCode: 81,
+    key: 'Q',
+    id: 'Heater-1',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
+  },
+  {
+    keyCode: 87,
+    key: 'W',
+    id: 'Heater-2',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
+  },
+  {
+    keyCode: 69,
+    key: 'E',
+    id: 'Heater-3',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
+  },
+  {
+    keyCode: 65,
+    key: 'A',
+    id: 'Heater-4',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
+  },
+  {
+    keyCode: 83,
+    key: 'S',
+    id: 'Clap',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
+  },
+  {
+    keyCode: 68,
+    key: 'D',
+    id: 'Open-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
+  },
+  {
+    keyCode: 90,
+    key: 'Z',
+    id: "Kick-n'-Hat",
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+  },
+  {
+    keyCode: 88,
+    key: 'X',
+    id: 'Kick',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+  },
+  {
+    keyCode: 67,
+    key: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  }
+]; 
 
 function App() {
 
@@ -12,70 +67,13 @@ function App() {
           Some text to be displayed here
         </container>
 
-          <button  className="drum-pad" id="Heater 1">
-
-            <audio className="clip" id="W" src=""></audio> 
-            
-            W
-            
-            </button>
-          <button className="drum-pad" id="Heater 2">
-
-            <audio className="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio> 
-            
-            Q
-            
-            </button>
-          <button className="drum-pad" id="Heater 3">
-
-            <audio className="clip" id="E" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio> 
-            
-            E
-            
-            </button>
-          <button className="drum-pad" id="Heater 4">
-
-            <audio className="clip" id="A" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"></audio> 
-            
-            A
-            
-            </button>
-          <button className="drum-pad" id="Clap">
-
-            <audio className="clip" id="S" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"></audio> 
-            
-            S
-            
-            </button>
-          <button className="drum-pad" id="Open-HH">
-
-            <audio className="clip" id="D" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio> 
-            
-            D
-            
-            </button>
-          <button className="drum-pad" id="Kick-n'-Hat
-          ">
-            <audio className="clip" id="Z" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio> 
-            
-            Z
-            
-            </button>
-          <button className="drum-pad" id="Kick">
-
-            <audio className="clip" id="X" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"></audio> 
-            
-            X
-            
-            </button>
-          <button className="drum-pad" id="Closed-HH">
-
-            <audio className="clip" id="C" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio> 
-            
-            C
-            
-            </button>
-      
+        {soundArray.map(sound => {
+          return <button>
+            <audio src={sound.url} />
+            {sound.key}
+          </button>
+        })}
+          
       </container>    
     </div>
   )
