@@ -60,7 +60,6 @@ const soundArray =[
 
 const playSound = selector => {
   const audio = document.getElementById(selector)
-  console.log(audio)
   audio.play()
 }
 
@@ -76,7 +75,8 @@ function App() {
         <div className="keyPad">
           
         {soundArray.map(sound => {
-          return <button className='drum-pad' id={sound.id} onClick={()=>{playSound(sound.key)}}>
+          return <button
+          key={sound.src}  className='drum-pad' id={sound.id} onClick={() => { playSound(sound.key) }}>
             <audio className='clip' id={sound.key} src={sound.url} />
             {sound.key}
           </button>
