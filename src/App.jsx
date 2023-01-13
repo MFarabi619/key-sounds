@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useEffect } from 'react'
 import './App.scss'
 
 const soundArray =[
@@ -64,6 +64,14 @@ const playSound = selector => {
 }
 
 function App() {
+
+  useEffect(() => {
+    document.addEventListener('keydown', (event) => {
+      console.log(event.key)
+      playSound(event.key.toUpperCase())
+    })
+
+  }, [])
 
   return (
     <div className="App">
