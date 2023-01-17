@@ -1,5 +1,5 @@
 # key-sounds
-A simple web app that generates audio corresponding to keystroke
+A simple web app that generates audio corresponding to keystrokes on a user's keyboard⌨️
 
 [Live Demo](https://key-sounds.vercel.app/)
 
