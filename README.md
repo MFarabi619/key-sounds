@@ -3,5 +3,5 @@ A simple web app that generates audio corresponding to keystrokes on a user's ke
 
 [Live Demo](https://key-sounds.vercel.app/)
 
-![Image](https://i.ibb.co/5K09xj4/Screenshot-2023-01-12-234749.jpg)
+![Image](https://github.com/MFarabi619/key-sounds/blob/main/Screenshot%202023-02-01%20052102.jpg?raw=true)
 
